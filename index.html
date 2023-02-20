@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Wordle</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <script src="./wordle.js" defer></script>
+  </head>
+  <body>
+    <h1>Wo·o·o·ordle</h1>
+    <nav>
+      <ul>
+        <li class="instr">
+          <i class="bi bi-info-square-fill" onclick="instr()"></i>
+          <div class="instrDiv" id="instrDiv">
+            <h1>Welcome to Wo·o·o·ordle</h1>
+            <i class="bi bi-x-square-fill" onclick="closeInstr()"></i>
+            <p>
+              Similar to the popular game Wordle, in Wo·o·o·ordle you are trying to guess the 4-letter word. 
+              You have a total of 6 attempts and if you do not guess the word by the 6th attempt, you lose. 
+              If you guess a word and the letter is in the same spot in the original word as it is on the grid, 
+              the grid will turn green. If the word contains the letter but not in that spot, the grid will turn 
+              orange. If the letter is not in the word, the grid will stay grey. You can click the 'Start Over' 
+              button to reset your guesses and the word. Good luck Wo·o·o·ordle'ing!
+            </p>
+          </div>
+        </li>
+        <li class="hint">
+          <i class="bi bi-question-square-fill" onclick="hint()"></i>
+          <div class="hintDiv" id="hintDiv">
+            <h1>Hint</h1>
+            <i class="bi bi-x-square-fill" onclick="closeHint()"></i>
+            <p id="hintP">
+            </p>
+          </div>
+        </li>
+        <li><i id="colourMode" class="bi bi-moon" onclick="darkMode()"></i></li>
+      </ul>
+    </nav>
+    <div class="content" id="content">
+      <table>
+        <tr>
+          <td><input type="text" name="r1c1" id="r1c1" maxlength="1"></td>
+          <td><input type="text" name="r1c2" id="r1c2" maxlength="1"></td>
+          <td><input type="text" name="r1c3" id="r1c3" maxlength="1"></td>
+          <td><input type="text" name="r1c4" id="r1c4" maxlength="1"></td>
+        </tr>
+        <tr>
+          <td><input type="text" name="r2c1" id="r2c1" maxlength="1"></td>
+          <td><input type="text" name="r2c2" id="r2c2" maxlength="1"></td>
+          <td><input type="text" name="r2c3" id="r2c3" maxlength="1"></td>
+          <td><input type="text" name="r2c4" id="r2c4" maxlength="1"></td>
+        </tr>
+        <tr>
+          <td><input type="text" name="r3c1" id="r3c1" maxlength="1"></td>
+          <td><input type="text" name="r3c2" id="r3c2" maxlength="1"></td>
+          <td><input type="text" name="r3c3" id="r3c3" maxlength="1"></td>
+          <td><input type="text" name="r3c4" id="r3c4" maxlength="1"></td>
+        </tr>
+        <tr>
+          <td><input type="text" name="r4c1" id="r4c1" maxlength="1"></td>
+          <td><input type="text" name="r4c2" id="r4c2" maxlength="1"></td>
+          <td><input type="text" name="r4c3" id="r4c3" maxlength="1"></td>
+          <td><input type="text" name="r4c4" id="r4c4" maxlength="1"></td>
+        </tr>
+        <tr>
+          <td><input type="text" name="r5c1" id="r5c1" maxlength="1"></td>
+          <td><input type="text" name="r5c2" id="r5c2" maxlength="1"></td>
+          <td><input type="text" name="r5c3" id="r5c3" maxlength="1"></td>
+          <td><input type="text" name="r5c4" id="r5c4" maxlength="1"></td>
+        </tr>
+        <tr>
+          <td><input type="text" name="r6c1" id="r6c1" maxlength="1"></td>
+          <td><input type="text" name="r6c2" id="r6c2" maxlength="1"></td>
+          <td><input type="text" name="r6c3" id="r6c3" maxlength="1"></td>
+          <td><input type="text" name="r6c4" id="r6c4" maxlength="1"></td>
+        </tr>
+      </table>
+      <div class="button" onclick="playWoooordle(state)">Start Over</div>
+    </div>
+  </body>
+</html>
