@@ -187,7 +187,6 @@ async function playWoooordle(state) {
     }
 
     const word = await chooseWord();
-    console.log(word);
 
     const hint = document.createTextNode(word.hint);
     let pTag = document.getElementById("hintP");
@@ -246,7 +245,6 @@ async function playWoooordle(state) {
             if (state.column == 5) {
 
                 guessesCounter++;
-                console.log(guessesCounter);
 
                 let counter = 0;
 
