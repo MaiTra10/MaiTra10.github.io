@@ -236,7 +236,7 @@ async function playWoooordle(state) {
 
             if(state.column > 0) {
 
-                cellHighlight = document.getElementById(`r${state.row}c${state.column}`);;
+                cellHighlight = document.getElementById(`r${state.row}c${state.column}`);
                 cellHighlight.style.border = "6px solid #E46E37";
 
             }
@@ -290,7 +290,7 @@ async function playWoooordle(state) {
                     state.row += 1;
                     state.column = 1;
     
-                    cellHighlight = document.getElementById(`r${state.row}c${state.column}`);;
+                    cellHighlight = document.getElementById(`r${state.row}c${state.column}`);
                     cellHighlight.style.border = "6px solid #E46E37";
 
                 }
@@ -298,7 +298,7 @@ async function playWoooordle(state) {
             } else {
 
                 window.alert("First complete the word!");
-                cellHighlight = document.getElementById(`r${state.row}c${state.column}`);;
+                cellHighlight = document.getElementById(`r${state.row}c${state.column}`);
                 cellHighlight.style.border = "6px solid #E46E37";
 
             }
